@@ -1,112 +1,136 @@
-<h1>Grupo 1</h1>
+<mat-toolbar class="custom-toolbar" *ngIf="verificar()">
+  <div class="left-menu">
+    <button mat-button [routerLink]="['/homes']" style="color: white">
+      <mat-icon>home</mat-icon>Home
+    </button>
+    <button mat-button [matMenuTriggerFor]="menuMerch" style="color: white" >
+      <mat-icon>shopping_bag</mat-icon>Merchandising
+    </button>
+    <button mat-button [matMenuTriggerFor]="menuAns" style="color: white" >
+      <mat-icon>comment</mat-icon>Respuestas
+    </button>
+    <button mat-button [matMenuTriggerFor]="menuSur" style="color: white">
+      <mat-icon>quiz</mat-icon>Encuestas
+    </button>
 
-<section>
-  <div class="example-label">Basic</div>
-  <div class="example-button-row">
-    <button mat-button>Basic</button>
-    <button mat-button disabled>Disabled</button>
-    <a mat-button href="https://www.google.com/" target="_blank">Link</a>
+
+    <button mat-button [matMenuTriggerFor]="menuSub" style="color: white" *ngIf="isAdministrador()">
+      <mat-icon>subscriptions</mat-icon>Subscripciones
+    </button>
+    <button mat-button [matMenuTriggerFor]="menupublicaciones" style="color: white" >
+      <mat-icon>chat_bubble</mat-icon>Publicaciones
+    </button>
+    <button mat-button [matMenuTriggerFor]="menumusicaa" style="color: white" >
+      <mat-icon>library_music</mat-icon> Canciones PreLanzadas
+    </button>
+    <button mat-button [matMenuTriggerFor]="menumesanje" style="color: white" >
+      <mat-icon>mail</mat-icon>Mensajes
+    </button>
+    <button mat-button [matMenuTriggerFor]="menupagos" style="color: white" *ngIf="isFanatico() || isAdministrador()">
+      <mat-icon>payments</mat-icon>Pagos
+    </button>
+    <button mat-button [matMenuTriggerFor]="menuUsuarios" style="color: white" *ngIf="isAdministrador() ">
+      <mat-icon>person_add</mat-icon>Usuarios
+    </button>
+    <button mat-button [matMenuTriggerFor]="menuRoles" style="color: white" *ngIf="isAdministrador() ">
+      <mat-icon>tune</mat-icon>Roles
+    </button>
+
+
+    <button mat-button [matMenuTriggerFor]="menuReportes" style="color: white" *ngIf="isAdministrador() ">
+      <mat-icon>insert_chart</mat-icon>Reportes 
+    </button>
   </div>
-</section>
-<mat-divider></mat-divider>
-<section>
-  <div class="example-label">Raised</div>
-  <div class="example-button-row">
-    <button mat-raised-button>Basic</button>
-    <button mat-raised-button disabled>Disabled</button>
-    <a mat-raised-button href="https://www.google.com/" target="_blank">Link</a>
+  <div class="right-menu">
+    <button mat-button [matMenuTriggerFor]="menuSalir" style="color: white">
+      <mat-icon>person</mat-icon>Usuario
+    </button>
   </div>
-</section>
-<mat-divider></mat-divider>
-<section>
-  <div class="example-label">Stroked</div>
-  <div class="example-button-row">
-    <button mat-stroked-button>Basic</button>
-    <button mat-stroked-button disabled>Disabled</button>
-    <a mat-stroked-button href="https://www.google.com/" target="_blank">Link</a>
-  </div>
-</section>
-<mat-divider></mat-divider>
-<section>
-  <div class="example-label">Flat</div>
-  <div class="example-button-row">
-    <button mat-flat-button>Basic</button>
-    <button mat-flat-button disabled>Disabled</button>
-    <a mat-flat-button href="https://www.google.com/" target="_blank">Link</a>
-  </div>
-</section>
-<mat-divider></mat-divider>
-<section>
-  <div class="example-label">Icon</div>
-  <div class="example-button-row">
-    <div class="example-flex-container">
-      <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
-        <mat-icon>more_vert</mat-icon>
-      </button>
-      <button mat-icon-button disabled aria-label="Example icon button with a open in new tab icon">
-        <mat-icon>open_in_new</mat-icon>
-      </button>
-    </div>
-  </div>
-</section>
-<mat-divider></mat-divider>
-<section>
-  <div class="example-label">FAB</div>
-  <div class="example-button-row">
-    <div class="example-flex-container">
-      <div class="example-button-container">
-        <button mat-fab aria-label="Example icon button with a delete icon">
-          <mat-icon>delete</mat-icon>
-        </button>
-      </div>
-      <div class="example-button-container">
-        <button mat-fab disabled aria-label="Example icon button with a heart icon">
-          <mat-icon>favorite</mat-icon>
-        </button>
-      </div>
-    </div>
-  </div>
-</section>
-<mat-divider></mat-divider>
-<section>
-  <div class="example-label">Mini FAB</div>
-  <div class="example-button-row">
-    <div class="example-flex-container">
-      <div class="example-button-container">
-        <button mat-mini-fab aria-label="Example icon button with a menu icon">
-          <mat-icon>menu</mat-icon>
-        </button>
-      </div>
-      <div class="example-button-container">
-        <button mat-mini-fab disabled aria-label="Example icon button with a home icon">
-          <mat-icon>home</mat-icon>
-        </button>
-      </div>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="example-label">Extended Fab</div>
-  <div class="example-button-row">
-    <div class="example-flex-container">
-      <div class="example-button-container">
-        <button mat-fab extended>
-          <mat-icon>favorite</mat-icon>
-          Basic
-        </button>
-      </div>
-      <div class="example-button-container">
-        <button mat-fab extended disabled>
-          <mat-icon>favorite</mat-icon>
-          Disabled
-        </button>
-      </div>
-      <div class="example-button-container">
-        <a mat-fab extended routerLink=".">
-          <mat-icon>favorite</mat-icon>
-          Link
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
+
+
+
+</mat-toolbar>
+
+<mat-menu #menuMerch="matMenu">
+  <button mat-menu-item routerLink="/merchandising" class="custom-menu-item" >Listar Productos</button>
+  <button mat-menu-item routerLink="/merchandising/nuevo" class="custom-menu-item" *ngIf="isAdministrador()">Registrar Producto</button>
+</mat-menu>
+<mat-menu #menuAns="matMenu">
+  <button mat-menu-item routerLink="/answer" class="custom-menu-item" *ngIf="isAdministrador()">Listar Respuestas</button>
+  <button mat-menu-item routerLink="/answer/nuevo" class="custom-menu-item">Registrar Respuestas</button>
+</mat-menu>
+<mat-menu #menuSub="matMenu">
+  <button mat-menu-item routerLink="/subscription" class="custom-menu-item">Listar Subscripciones</button>
+  <button mat-menu-item routerLink="/subscription/nuevo" class="custom-menu-item">Registrar Subscripciones</button>
+</mat-menu>
+<mat-menu #menuSur="matMenu">
+  <button mat-menu-item routerLink="/survey" class="custom-menu-item">Listar encuesta</button>
+  <button mat-menu-item routerLink="/survey/nuevo" class="custom-menu-item" *ngIf="isAdministrador()">Registrar encuesta</button>
+</mat-menu>
+<mat-menu #menumusicaa="matMenu">
+  <button mat-menu-item routerLink="/musica" class="custom-menu-item" >Listar musica</button>
+  <button mat-menu-item routerLink="/musica/nuevo" class="custom-menu-item" *ngIf="isArtista() || isAdministrador()">Registrar musica</button>
+</mat-menu>
+<mat-menu #menumesanje="matMenu">
+  <button mat-menu-item routerLink="/mensaje" class="custom-menu-item">Listar mensajes</button>
+  <button mat-menu-item routerLink="/mensaje/nuevo" class="custom-menu-item">Registrar mensajes</button>
+</mat-menu>
+<mat-menu #menupublicaciones="matMenu">
+  <button mat-menu-item routerLink="/publicaciones" class="custom-menu-item" >Listar publicaciones</button>
+  <button mat-menu-item routerLink="/publicaciones/nuevo" class="custom-menu-item" >Registrar publicaciones</button>
+</mat-menu>
+<mat-menu #menupagos="matMenu">
+  <button mat-menu-item routerLink="/pagos" class="custom-menu-item" >Listar Pagos</button>
+  <button mat-menu-item routerLink="/pagos/nuevo" class="custom-menu-item" >Registrar Pagos</button>
+</mat-menu>
+<mat-menu #menuUsuarios="matMenu">
+  <button mat-menu-item routerLink="/usuarios" class="custom-menu-item">Listar Usuarios</button>
+  <button mat-menu-item routerLink="/usuarios/nuevo" class="custom-menu-item">Registrar Usuarios</button>
+</mat-menu>
+<mat-menu #menuRoles="matMenu">
+  <button mat-menu-item routerLink="/roles" class="custom-menu-item">Listar Roles</button>
+  <button mat-menu-item routerLink="/roles/nuevo" class="custom-menu-item">Registrar Roles</button>
+</mat-menu>
+<mat-menu #menuReportes="matMenu">
+  <button mat-menu-item routerLink="/reportes/total" class="custom-menu-item">
+    <mat-icon> bar_chart</mat-icon>
+    Reporte Canciones por Genero
+  </button>
+  <button mat-menu-item routerLink="/reportes/totalsongs" class="custom-menu-item">
+    <mat-icon> pie_chart</mat-icon>
+    Reporte Total Canciones
+  </button>
+  <button mat-menu-item routerLink="/reportes/tiposub" class="custom-menu-item">
+    <mat-icon> bar_chart</mat-icon>
+    Reporte Tipo Subscripciones
+  </button>
+  <button mat-menu-item routerLink="/reportes/metodopago" class="custom-menu-item">
+    <mat-icon> pie_chart</mat-icon>
+    Reporte Tipo Metodo de Pago
+  </button>
+  <button mat-menu-item routerLink="/reportes/totalrespuestas" class="custom-menu-item">
+    <mat-icon> pie_chart</mat-icon>
+    Reporte Total Respuestas
+  </button>
+  <button mat-menu-item routerLink="/reportes/totalencuestas" class="custom-menu-item">
+    <mat-icon> bar_chart</mat-icon>
+    Reporte Total Respuestas por Encuestas
+  </button>
+</mat-menu>
+
+<mat-menu #menuSalir="matMenu">
+  <button
+    mat-menu-item
+    routerLink="/login"
+    (click)="cerrar()"
+    class="custom-menu-item"
+  >
+    <mat-icon>logout</mat-icon>
+    <span>Cerrar sesión</span>
+  </button>
+  <button mat-menu-item class="custom-menu-item">
+    Rol:
+    <span>{{ role }}</span>
+  </button>
+</mat-menu>
+<router-outlet></router-outlet>
