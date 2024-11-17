@@ -1,0 +1,44 @@
+<div>
+  @if (edicion) {
+    <h1>Actualizar Producto</h1>
+  }@else {
+    <h1>Registro de Producto</h1>
+  }
+  </div>
+  <div>
+    <form [formGroup]="form" (submit)="insertar()">
+
+      <mat-form-field class="example-full-width" *ngIf="edicion">
+        <mat-label>Código</mat-label>
+        <input matInput formControlName="hc" />
+      </mat-form-field>
+      
+      <mat-form-field>
+        <mat-label>Nombre del Producto</mat-label>
+        <mat-select formControlName="hname_merchandising">
+          @for (food of listanombre; track food) {
+          <mat-option [value]="food.value">{{ food.viewValue }}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+      <br />
+      <br>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>descripcion</mat-label>
+        <input matInput placeholder="coloca tu descripcion" formControlName="hdescription_merchandising" />
+      </mat-form-field>
+      <br />
+      <br>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>precio</mat-label>
+        <input matInput placeholder="1500" formControlName="hprice_merchandising" />
+      </mat-form-field>
+      <br />
+      <div>
+        <button mat-flat-button class="custom-button">Registrar</button>
+      </div>
+    </form>
+  </div>
+
