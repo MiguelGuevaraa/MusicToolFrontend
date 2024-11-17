@@ -1,0 +1,44 @@
+<div class="container" style="text-align: center;margin: 5%;">
+    <div>
+      @if (edicion) {
+        <h1>Actualizar Subscripcion</h1>
+      }@else {
+        <h1>Registro de Subscripcion</h1>
+      }
+    </div>
+    <div>
+      <form [formGroup]="form" (submit)="insertar()">
+  
+        <mat-form-field class="example-full-width" *ngIf="edicion">
+          <mat-label>ID</mat-label>
+          <input matInput formControlName="hid" />
+        </mat-form-field>
+        <br />
+        
+        <mat-form-field>
+          <mat-label>Tipo de Subscripcion</mat-label>
+          <mat-select formControlName="htype_susciption">
+            @for (food of listatipos; track food) {
+            <mat-option [value]="food.value">{{ food.viewValue }}</mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Fecha</mat-label>
+            <input matInput [matDatepicker]="picker"  formControlName="hsub_date" />
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle
+              matIconSuffix
+              [for]="picker"
+            ></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        
+        <div>
+          <button mat-flat-button class="custom-button">Registrar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  

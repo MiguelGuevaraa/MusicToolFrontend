@@ -1,0 +1,50 @@
+<div class="container" style="text-align: center;margin: 5%;">
+  <div>
+    @if (edicion) {
+      <h1>Actualizar Encuentas</h1>
+    }@else {
+      <h1>Registro de Encuentas</h1>
+    }
+    </div>
+    <div>
+      <form [formGroup]="form" (submit)="insertar()">
+  
+        <mat-form-field class="example-full-width" *ngIf="edicion">
+          <mat-label>ID</mat-label>
+          <input matInput formControlName="hid_survey" />
+        </mat-form-field>
+        <br />
+        <mat-form-field class="example-full-width">
+          <mat-label>pregunta1</mat-label>
+          <input matInput placeholder="coloca tu descripcion" formControlName="hquestion1" />
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>pregunta2</mat-label>
+          <input matInput placeholder="coloca tu descripcion" formControlName="hquestion2" />
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>titulo</mat-label>
+          <input matInput placeholder="coloca tu titulo" formControlName="htitle" />
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>descripcion</mat-label>
+          <input matInput placeholder="coloca tu descripcion" formControlName="hdescription" />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Fechacreacion</mat-label>
+          <input matInput [matDatepicker]="picker"  formControlName="hcreationDate" />
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle
+            matIconSuffix
+            [for]="picker"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        
+        <div>
+          <button mat-flat-button class="custom-button">Registrar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
