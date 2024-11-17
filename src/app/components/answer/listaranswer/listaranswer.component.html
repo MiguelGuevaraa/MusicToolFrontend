@@ -1,0 +1,52 @@
+<div>
+    <div style="text-align: center; margin: 5%;"><h1>Lista de respuestas</h1></div>
+    <div class="container">
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  
+        <ng-container matColumnDef="ctt1">
+          <th mat-header-cell *matHeaderCellDef>Codigo</th>
+          <td mat-cell *matCellDef="let element"> {{element.id_Respuestas}} </td>
+        </ng-container>
+  
+        <!-- Name Column -->
+        <ng-container matColumnDef="ctt2">
+          <th mat-header-cell *matHeaderCellDef> Respuesta 1 </th>
+          <td mat-cell *matCellDef="let element"> {{element.respuesta_1}} </td>
+        </ng-container>
+  
+        <!-- Weight Column -->
+        <ng-container matColumnDef="ctt3">
+          <th mat-header-cell *matHeaderCellDef> Respuesta 2 </th>
+          <td mat-cell *matCellDef="let element"> {{element.respuesta_2}} </td>
+        </ng-container>
+  
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="ctt4">
+          <th mat-header-cell *matHeaderCellDef> Encuesta </th>
+          <td mat-cell *matCellDef="let element"> {{element.su.title}} </td>
+        </ng-container>
+        <ng-container matColumnDef="action1">
+          <th mat-header-cell *matHeaderCellDef> Eliminar </th>
+          <td mat-cell *matCellDef="let element" (click)="eliminar(element.id_Respuestas)"> 
+            <mat-icon style="color:rgb(8, 138, 95)">delete</mat-icon>            
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="action2">
+          <th mat-header-cell *matHeaderCellDef> Actualizar </th>
+          <td mat-cell *matCellDef="let element" > 
+              <button mat-raised-button [routerLink]="['editaranswer',element.id_Respuestas]">
+                <mat-icon style="color:rgb(8, 138, 95)">edit</mat-icon> 
+              </button>          
+          </td>
+        </ng-container>
+          
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+  
+  
+    </div>
+  
+  
+  </div>
+  
