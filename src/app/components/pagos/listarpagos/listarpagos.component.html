@@ -1,0 +1,57 @@
+<div>
+    <div style="text-align: center; margin: 5%;"><h1>Lista de pagos</h1></div>
+    <div class="container">
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  
+        <ng-container matColumnDef="ctt1">
+          <th mat-header-cell *matHeaderCellDef>Código</th>
+          <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+  
+        <!-- Name Column -->
+        <ng-container matColumnDef="ctt2">
+          <th mat-header-cell *matHeaderCellDef> Monto </th>
+          <td mat-cell *matCellDef="let element"> {{element.mount}} </td>
+        </ng-container>
+  
+        <!-- Weight Column -->
+        <ng-container matColumnDef="ctt3">
+          <th mat-header-cell *matHeaderCellDef> Fecha de Pago </th>
+          <td mat-cell *matCellDef="let element"> {{element.pay_date}} </td>
+        </ng-container>
+  
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="ctt4">
+          <th mat-header-cell *matHeaderCellDef> Metodo de Pago </th>
+          <td mat-cell *matCellDef="let element"> {{element.pay_method}} </td>
+        </ng-container>
+          <!-- Symbol Column -->
+          <ng-container matColumnDef="ctt5">
+            <th mat-header-cell *matHeaderCellDef>Tipo de Subscripcion</th>
+            <td mat-cell *matCellDef="let element"> {{element.subs.type_susciption}} </td>
+          </ng-container>
+          <ng-container matColumnDef="action1">
+            <th mat-header-cell *matHeaderCellDef> Eliminar </th>
+            <td mat-cell *matCellDef="let element" (click)="eliminar(element.id)"> 
+              <mat-icon style="color:rgb(8, 138, 95)">delete</mat-icon>            
+            </td>
+          </ng-container>
+          <ng-container matColumnDef="action2">
+            <th mat-header-cell *matHeaderCellDef> Actualizar </th>
+            <td mat-cell *matCellDef="let element" > 
+                <button mat-raised-button [routerLink]="['editarpagos',element.id]">
+                  <mat-icon style="color:rgb(8, 138, 95)">edit</mat-icon> 
+                </button>          
+            </td>
+          </ng-container>
+          
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+  
+  
+    </div>
+  
+  
+  </div>
+  

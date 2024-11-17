@@ -1,0 +1,43 @@
+<div class="container" style="text-align: center;margin: 5%;">
+  <div>
+    @if (edicion) {
+      <h1>Actualizar Cancion</h1>
+    }@else {
+      <h1>Registro de Cancion</h1>
+    }
+    </div>
+    <div>
+      <form [formGroup]="form" (submit)="insertar()">
+  
+        <mat-form-field class="example-full-width" *ngIf="edicion">
+          <mat-label>ID</mat-label>
+          <input matInput formControlName="hid" />
+        </mat-form-field>
+        <br />
+        
+        <mat-form-field class="example-full-width">
+            <mat-label>nombre</mat-label>
+            <input matInput placeholder="escribe el nombre de la cancion ..." formControlName="hname" />
+          </mat-form-field>
+
+        
+          <mat-form-field>
+            <mat-label>genero</mat-label>
+            <mat-select formControlName="hgenre">
+              @for (food of listagenero; track food) {
+              <mat-option [value]="food.value">{{ food.viewValue }}</mat-option>
+              }
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <mat-label>duracion</mat-label>
+            <input matInput placeholder="escribe tu duracion ..." formControlName="hduration" />
+          </mat-form-field>
+        <div>
+          <button mat-flat-button class="custom-button">Registrar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
