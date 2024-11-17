@@ -1,7 +1,74 @@
-mat-form-field {
-    width: 50%;
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f4fa; /* Fondo claro */
 }
-.custom-button {
-    background-color: rgb(8, 138, 95);   
-    color: white;         
+
+.container {
+  width: 350px;
+  background-color: #b3c7f9; /* Azul claro */
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+  text-align: center;
+  margin: 0 auto ;
+  margin-top: 70px;
+}
+
+.container img {
+  width: 120px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.container h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #2b3856; /* Azul oscuro */
+  text-transform: capitalize;
+}
+
+mat-form-field {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+mat-form-field input {
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 8px;
+  outline: none;
+}
+
+mat-form-field input:focus {
+  border-color: #1d4ed8; /* Azul más intenso */
+}
+
+button {
+  background-color: #2b3856;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  text-transform: uppercase;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #1d4ed8; /* Color más brillante al pasar el cursor */
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
