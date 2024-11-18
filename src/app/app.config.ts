@@ -17,14 +17,14 @@ export const appConfig: ApplicationConfig = {
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
     provideClientHydration(),
-    provideHttpClient(withInterceptorsFromDi()),
+    provideHttpClient(withFetch(), withInterceptorsFromDi()),
     provideAnimationsAsync(),
     provideNativeDateAdapter(),
     importProvidersFrom(
       JwtModule.forRoot({
         config: {
           tokenGetter: tokenGetter,
-          allowedDomains: ['localhost:8080'],
+          allowedDomains: ['musictoolback.onrender.com'],
           disallowedRoutes: ['https://musictoolback.onrender.com/login/forget'],
         },
       })
