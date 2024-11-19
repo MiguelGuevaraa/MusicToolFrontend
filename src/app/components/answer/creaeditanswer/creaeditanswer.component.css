@@ -2,7 +2,7 @@ mat-form-field {
   width: 60%;
 }
 .custom-button {
-  background-color: rgb(8, 138, 95);
+  background-color: rgb(32, 8, 138);
 
 }
 
@@ -57,11 +57,11 @@ input.mat-input-element {
 }
 
 input.mat-input-element:focus {
-  border-color: #4CAF50;
+  border-color: rgb(32, 8, 138);
 }
 
 button.custom-button {
-  background-color: #4CAF50;
+  background-color: rgb(32, 8, 138);
   color: white;
   font-size: 1rem;
   font-weight: 500;
@@ -75,11 +75,11 @@ button.custom-button {
 }
 
 button.custom-button:hover {
-  background-color: #388E3C;
+  background-color: rgb(32, 8, 138);
 }
 
 mat-form-field:hover {
-  border-color: #4CAF50;
+  border-color: rgb(32, 8, 138);
 }
 
 form {

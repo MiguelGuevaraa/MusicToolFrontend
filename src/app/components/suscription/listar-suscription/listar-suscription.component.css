@@ -1,0 +1,121 @@
+table {
+    width: 70%;
+  }
+  /* Contenedor principal para la tabla */
+  div {
+  background-color: #ffffff;
+  padding: 2rem;
+  margin: 3% auto;
+  border-radius: 8px;
+  max-width: 90%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+  }
+  
+  /* Título principal */
+  h1 {
+  font-size: 2rem;
+  color: #003366; /* Azul oscuro */
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  }
+  
+  /* Estilo para los encabezados de la tabla */
+  th.mat-header-cell {
+  background-color: #0066cc; /* Azul medio */
+  color: white;
+  font-size: 1rem;
+  padding: 12px 16px;
+  text-align: left;
+  }
+  
+  td.mat-cell {
+  font-size: 1rem;
+  padding: 12px 16px;
+  color: #333;
+  text-align: left;
+  border-bottom: 1px solid #f0f0f0;
+  }
+  
+  /* Estilo para el icono de eliminar */
+  mat-icon {
+  cursor: pointer;
+  transition: color 0.3s ease;
+  }
+  
+  mat-icon:hover {
+  color: #d32f2f; /* Rojo brillante cuando se pasa el cursor */
+  }
+  
+  /* Botón de actualizar */
+  button.mat-raised-button {
+  background-color: #007bb5; /* Azul medio */
+  color: white;
+  font-size: 1rem;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  transition: background-color 0.3s ease;
+  }
+  
+  button.mat-raised-button:hover {
+  background-color: #006699; /* Azul más oscuro cuando se pasa el cursor */
+  }
+  
+  /* Estilo para la tabla */
+  table.mat-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Borde inferior de las celdas */
+  tr.mat-row:hover {
+  background-color: #f4f6f9;
+  }
+  
+  /* Estilo para las filas de la tabla */
+  tr.mat-header-row {
+  background-color: #0066cc; /* Azul para el encabezado */
+  }
+  
+  /* Estilos de las columnas */
+  ng-container {
+  display: block;
+  }
+  
+  /* Estilo para las celdas de acción */
+  td.mat-cell.mat-cell-action {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  }
+  
+  /* Espaciado entre celdas de la tabla */
+  tr.mat-row td {
+  padding: 12px 16px;
+  }
+  
+  /* Ajustes responsivos para dispositivos pequeños */
+  @media (max-width: 768px) {
+  div {
+    padding: 1.5rem;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  .mat-header-cell, .mat-cell {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+  
+  button.mat-raised-button {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+  }
+  
+  
