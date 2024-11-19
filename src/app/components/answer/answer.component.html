@@ -1,4 +1,6 @@
 <router-outlet></router-outlet>
-<div [hidden]="route.children.length!==0">
-    <app-listaranswer></app-listaranswer>
+<div class="router-container">
+    <div [hidden]="route.children.length !== 0" class="app-listaranswer-container">
+        <app-listaranswer></app-listaranswer>
+    </div>
 </div>
