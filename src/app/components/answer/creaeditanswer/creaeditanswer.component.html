@@ -11,15 +11,15 @@
         <input matInput formControlName="hid_Respuestas" />
       </mat-form-field>
       <mat-form-field class="example-full-width">
-        <mat-label>respuesta_1</mat-label>
+        <mat-label>Respuesta 1</mat-label>
         <textarea matInput formControlName="hrespuesta_1"></textarea>
       </mat-form-field>
       <mat-form-field class="example-full-width">
-        <mat-label>respuesta_2</mat-label>
+        <mat-label>Respuesta 2</mat-label>
         <textarea matInput formControlName="hespuesta_2"></textarea>
       </mat-form-field>
       <mat-form-field>
-        <mat-label>encuesta</mat-label>
+        <mat-label>Encuesta</mat-label>
         <mat-select  formControlName="hsu">
           @for (food of listasurvey; track food) {
           <mat-option [value]="food">{{ food.title }}</mat-option>

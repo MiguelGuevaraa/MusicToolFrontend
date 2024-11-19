@@ -33,14 +33,14 @@
           <ng-container matColumnDef="action1">
             <th mat-header-cell *matHeaderCellDef> Eliminar </th>
             <td mat-cell *matCellDef="let element" (click)="eliminar(element.id)"> 
-              <mat-icon style="color:rgb(8, 138, 95)">delete</mat-icon>            
+              <mat-icon style="color:rgb(32, 8, 138)">delete</mat-icon>            
             </td>
           </ng-container>
           <ng-container matColumnDef="action2">
             <th mat-header-cell *matHeaderCellDef> Actualizar </th>
             <td mat-cell *matCellDef="let element" > 
                 <button mat-raised-button [routerLink]="['editarpagos',element.id]">
-                  <mat-icon style="color:rgb(8, 138, 95)">edit</mat-icon> 
+                  <mat-icon style="color:rgb(32, 8, 138)">edit</mat-icon> 
                 </button>          
             </td>
           </ng-container>

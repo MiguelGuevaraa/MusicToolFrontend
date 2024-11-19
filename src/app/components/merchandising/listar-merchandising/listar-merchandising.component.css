@@ -1,4 +1,116 @@
-table {
-    width: 70%;
-  }
-  
+mat-form-field {
+  width: 60%;
+}
+.custom-button {
+  background-color: #229ff3;
+
+}
+/* Contenedor principal para el formulario */
+div {
+background-color: #fff;
+padding: 2rem;
+margin: 3% auto;
+border-radius: 8px;
+max-width: 90%;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+border: 1px solid #e0e0e0;
+}
+
+/* Título principal */
+h1 {
+font-size: 2rem;
+color: #333;
+text-align: center;
+margin-bottom: 2rem;
+font-weight: 600;
+}
+
+/* Estilo de los campos del formulario */
+mat-form-field {
+width: 100%;
+margin-bottom: 1.5rem;
+}
+
+/* Etiqueta del campo de formulario */
+mat-label {
+font-size: 1.1rem;
+color: #333;
+}
+
+/* Estilo para los inputs y select */
+input, mat-select {
+font-size: 1rem;
+padding: 10px;
+border-radius: 5px;
+border: 1px solid #ddd;
+transition: border-color 0.3s ease-in-out;
+}
+
+input:focus, mat-select:focus {
+border-color: #229ff3;
+outline: none;
+}
+
+/* Espaciado entre campos de formulario */
+mat-form-field br {
+margin-bottom: 1rem;
+}
+
+/* Botón de acción */
+button.custom-button {
+background-color: #229ff3;
+color: white;
+font-size: 1.1rem;
+padding: 10px 20px;
+border-radius: 5px;
+width: 100%;
+transition: background-color 0.3s ease;
+border: none;
+}
+
+/* Efecto hover en el botón */
+button.custom-button:hover {
+background-color: #229ff3;
+cursor: pointer;
+}
+
+/* Estilos para los campos de texto */
+input::placeholder {
+color: #888;
+}
+
+mat-select {
+font-size: 1rem;
+}
+
+/* Estilo para las opciones del mat-select */
+mat-option {
+font-size: 1rem;
+}
+
+/* Estilos de márgenes para mejorar la disposición del formulario */
+div.form-container {
+padding: 2rem;
+background-color: #f9f9f9;
+border-radius: 8px;
+max-width: 600px;
+margin: auto;
+}
+
+/* Estilo responsivo para dispositivos móviles */
+@media (max-width: 768px) {
+div {
+  padding: 1.5rem;
+  margin: 5% auto;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+button.custom-button {
+  font-size: 1rem;
+  padding: 8px 15px;
+}
+}
+
