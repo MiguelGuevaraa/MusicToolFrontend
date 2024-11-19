@@ -16,13 +16,13 @@
         <br />
         
         <mat-form-field class="example-full-width">
-            <mat-label>nombre</mat-label>
+            <mat-label>Nombre</mat-label>
             <input matInput placeholder="escribe el nombre de la cancion ..." formControlName="hname" />
           </mat-form-field>
 
         
           <mat-form-field>
-            <mat-label>genero</mat-label>
+            <mat-label>Genero</mat-label>
             <mat-select formControlName="hgenre">
               @for (food of listagenero; track food) {
               <mat-option [value]="food.value">{{ food.viewValue }}</mat-option>
@@ -31,7 +31,7 @@
           </mat-form-field>
 
           <mat-form-field class="example-full-width">
-            <mat-label>duracion</mat-label>
+            <mat-label>Duracion</mat-label>
             <input matInput placeholder="escribe tu duracion ..." formControlName="hduration" />
           </mat-form-field>
         <div>

@@ -8,13 +8,13 @@
       <form [formGroup]="form" (submit)="insertar()">
   
         <mat-form-field class="example-full-width" *ngIf="edicion">
-          <mat-label>codigo</mat-label>
+          <mat-label>Codigo</mat-label>
           <input matInput formControlName="hid" />
         </mat-form-field>
   
         <br />
         <mat-form-field class="example-full-width">
-          <mat-label>monto</mat-label>
+          <mat-label>Monto</mat-label>
           <input matInput placeholder="escribe el monto del pago..." formControlName="hmount" />
         </mat-form-field>
         
@@ -32,7 +32,7 @@
         </mat-form-field>
         <br>
         <mat-form-field>
-            <mat-label>tipo pago</mat-label>
+            <mat-label>Tipo de pago</mat-label>
             <mat-select formControlName="hpay_method">
               @for (food of listaTipopago; track food) {
               <mat-option [value]="food.value">{{ food.viewValue }}</mat-option>
@@ -41,7 +41,7 @@
           </mat-form-field>
         <br />
         <mat-form-field>
-          <mat-label>suscripcion</mat-label>
+          <mat-label>Suscripcion</mat-label>
           <mat-select  formControlName="hsubs">
             @for (food of listasuscripciones; track food) {
             <mat-option [value]="food">{{ food.type_susciption }}</mat-option>
